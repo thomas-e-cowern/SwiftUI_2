@@ -14,7 +14,9 @@ struct RoundedButtonView: View {
     
     var body: some View {
         
-        Button(action: {}) {
+        Button(action: {
+            print(text)
+        }) {
             Text(text)
                 .padding()
                 .background(color)
