@@ -11,6 +11,7 @@
 		41024C7725A9F437004ABF1A /* StartingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024C7625A9F437004ABF1A /* StartingView.swift */; };
 		41024C7925A9F440004ABF1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41024C7825A9F440004ABF1A /* Assets.xcassets */; };
 		41024C7C25A9F440004ABF1A /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41024C7B25A9F440004ABF1A /* Preview Assets.xcassets */; };
+		41024C8625AA0591004ABF1A /* RoundedButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024C8525AA0591004ABF1A /* RoundedButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +21,7 @@
 		41024C7825A9F440004ABF1A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		41024C7B25A9F440004ABF1A /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		41024C7D25A9F440004ABF1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		41024C8525AA0591004ABF1A /* RoundedButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +56,7 @@
 			children = (
 				41024C7425A9F437004ABF1A /* SwiftUI_BasicsApp.swift */,
 				41024C7625A9F437004ABF1A /* StartingView.swift */,
+				41024C8525AA0591004ABF1A /* RoundedButtonView.swift */,
 				41024C7825A9F440004ABF1A /* Assets.xcassets */,
 				41024C7D25A9F440004ABF1A /* Info.plist */,
 				41024C7A25A9F440004ABF1A /* Preview Content */,
@@ -138,6 +141,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41024C8625AA0591004ABF1A /* RoundedButtonView.swift in Sources */,
 				41024C7725A9F437004ABF1A /* StartingView.swift in Sources */,
 				41024C7525A9F437004ABF1A /* SwiftUI_BasicsApp.swift in Sources */,
 			);
