@@ -12,14 +12,18 @@ struct StartingView: View {
             
         VStack {
             RoundedButtonView(color: .orange)
-            RoundedButtonView(color: .blue)
-            RoundedButtonView(color: .purple)
+            RoundedButtonView(color: .blue, text: "Blue")
+            RoundedButtonView(color: .purple, text: "Purple")
         }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        StartingView()
+        Group {
+            StartingView().previewDevice("iPhone 8")
+            StartingView().previewDevice("iPhone 11")
+//            StartingView().previewDevice("iPad Pro (9.7-inch)")
+        }
     }
 }

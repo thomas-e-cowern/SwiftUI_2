@@ -10,19 +10,23 @@ import SwiftUI
 struct RoundedButtonView: View {
     
     var color : Color
+    var text : String = "Default Value"
     
     var body: some View {
-        Text("Tap Me!")
-            .padding()
-            .background(color)
-            .foregroundColor(.white)
-            .font(.largeTitle)
-            .cornerRadius(10)
+        
+        Button(action: {}) {
+            Text(text)
+                .padding()
+                .background(color)
+                .foregroundColor(.white)
+                .font(.largeTitle)
+                .cornerRadius(10)
+        }
     }
 }
 
 struct RoundedButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        RoundedButtonView(color: .red)
+        RoundedButtonView(color: .red, text: "Replace me")
     }
 }
