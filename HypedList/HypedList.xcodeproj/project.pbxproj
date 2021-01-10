@@ -15,6 +15,10 @@
 		41024CA725AA384A004ABF1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41024C9125AA384A004ABF1A /* Assets.xcassets */; };
 		41024CB725AA3ACA004ABF1A /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CB625AA3ACA004ABF1A /* UpcomingView.swift */; };
 		41024CB825AA3ACA004ABF1A /* UpcomingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CB625AA3ACA004ABF1A /* UpcomingView.swift */; };
+		41024CBC25AB2BCE004ABF1A /* CreateHypedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CBB25AB2BCE004ABF1A /* CreateHypedEventView.swift */; };
+		41024CBD25AB2BCF004ABF1A /* CreateHypedEventView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CBB25AB2BCE004ABF1A /* CreateHypedEventView.swift */; };
+		41024CC125AB2D47004ABF1A /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CC025AB2D47004ABF1A /* HypedEvent.swift */; };
+		41024CC225AB2D47004ABF1A /* HypedEvent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CC025AB2D47004ABF1A /* HypedEvent.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +31,8 @@
 		41024CA025AA384A004ABF1A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		41024CA125AA384A004ABF1A /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		41024CB625AA3ACA004ABF1A /* UpcomingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingView.swift; sourceTree = "<group>"; };
+		41024CBB25AB2BCE004ABF1A /* CreateHypedEventView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHypedEventView.swift; sourceTree = "<group>"; };
+		41024CC025AB2D47004ABF1A /* HypedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEvent.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +69,8 @@
 				41024C8F25AA383A004ABF1A /* HypedListApp.swift */,
 				41024C9025AA383A004ABF1A /* HypedListTabView.swift */,
 				41024CB625AA3ACA004ABF1A /* UpcomingView.swift */,
+				41024CC025AB2D47004ABF1A /* HypedEvent.swift */,
+				41024CBB25AB2BCE004ABF1A /* CreateHypedEventView.swift */,
 				41024C9125AA384A004ABF1A /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -191,6 +199,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41024CBC25AB2BCE004ABF1A /* CreateHypedEventView.swift in Sources */,
+				41024CC125AB2D47004ABF1A /* HypedEvent.swift in Sources */,
 				41024CA425AA384A004ABF1A /* HypedListTabView.swift in Sources */,
 				41024CA225AA384A004ABF1A /* HypedListApp.swift in Sources */,
 				41024CB725AA3ACA004ABF1A /* UpcomingView.swift in Sources */,
@@ -201,6 +211,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41024CBD25AB2BCF004ABF1A /* CreateHypedEventView.swift in Sources */,
+				41024CC225AB2D47004ABF1A /* HypedEvent.swift in Sources */,
 				41024CA525AA384A004ABF1A /* HypedListTabView.swift in Sources */,
 				41024CA325AA384A004ABF1A /* HypedListApp.swift in Sources */,
 				41024CB825AA3ACA004ABF1A /* UpcomingView.swift in Sources */,
