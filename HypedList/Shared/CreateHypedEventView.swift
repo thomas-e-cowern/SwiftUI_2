@@ -11,6 +11,7 @@ struct CreateHypedEventView: View {
     
     @StateObject var hypedEvent = HypedEvent()
     @State var showTime = false
+    @State var showImagePicker = false
     
     var body: some View {
         Form {
@@ -24,6 +25,17 @@ struct CreateHypedEventView: View {
                 DatePicker("Date", selection: $hypedEvent.date, displayedComponents: showTime ? [.date, .hourAndMinute] : [.date]).datePickerStyle(GraphicalDatePickerStyle())
                 Toggle(isOn: $showTime) {
                     FormLabelView(title: "Time", iconSystemName: "clock.fill", color: .blue)
+                }
+            }
+            
+            Section {
+                Button(action: {
+                    showImagePicker = true
+                }) {
+                    Text("Pick An Image")
+                }
+                .sheet(isPresented: $showImagePicker) {
+                    ImagePicker()
                 }
             }
             
