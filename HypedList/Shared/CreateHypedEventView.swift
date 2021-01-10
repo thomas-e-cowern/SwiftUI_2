@@ -10,26 +10,37 @@ import SwiftUI
 struct CreateHypedEventView: View {
     
     @StateObject var hypedEvent = HypedEvent()
+    @State var showTime = false
     
     var body: some View {
         Form {
             Section {
+                FormLabelView(title: "Title", iconSystemName: "keyboard", color: .blue)
                 TextField("Family Vacation", text: $hypedEvent.title).autocapitalization(.words)
             }
             
             Section {
-                DatePicker("Date", selection: $hypedEvent.date, displayedComponents: [.date, .hourAndMinute]).datePickerStyle(GraphicalDatePickerStyle())
+                FormLabelView(title: "Date & Time", iconSystemName: "calendar", color: .green)
+                DatePicker("Date", selection: $hypedEvent.date, displayedComponents: showTime ? [.date, .hourAndMinute] : [.date]).datePickerStyle(GraphicalDatePickerStyle())
+                Toggle(isOn: $showTime) {
+                    FormLabelView(title: "Time", iconSystemName: "clock.fill", color: .blue)
+                }
             }
             
             Section {
-                ColorPicker("Color", selection: $hypedEvent.color)
+                ColorPicker(selection: $hypedEvent.color) {
+                    FormLabelView(title: "Color", iconSystemName: "calendar", color: .yellow)
+                }
             }
             
             Section {
+                FormLabelView(title: "URL", iconSystemName: "curlybraces.square.fill", color: .purple)
                 TextField("Website", text: $hypedEvent.url)
                     .keyboardType(.URL)
                     .autocapitalization(.none)
             }
+            
+            
         }
     }
 }
