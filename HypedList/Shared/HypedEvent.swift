@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import SwiftDate
 
 class HypedEvent: ObservableObject, Identifiable {
     var id = UUID().uuidString
@@ -43,7 +44,7 @@ var testHypedEvent1: HypedEvent {
     
     hypedEvent.title = "Architecture show"
     hypedEvent.color = .blue
-    hypedEvent.date = Date()
+    hypedEvent.date = Date() + 4.days
     hypedEvent.url = "www.yahoo.com"
     
     return hypedEvent
@@ -60,7 +61,7 @@ var testHypedEvent2: HypedEvent {
     
     hypedEvent.title = "Family gathering show"
     hypedEvent.color = .red
-    hypedEvent.date = Date()
+    hypedEvent.date = Date() + 1.months
     hypedEvent.url = "www.google.com"
     
     return hypedEvent

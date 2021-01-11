@@ -25,10 +25,7 @@
 		41024CCC25AB841E004ABF1A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CCA25AB841E004ABF1A /* ImagePicker.swift */; };
 		41A9C21A25ACAC1600DABDA3 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */; };
 		41A9C21B25ACAC1600DABDA3 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */; };
-		41A9C22225ACF22000DABDA3 /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9C22125ACF22000DABDA3 /* SwiftDate */; };
-		41A9C22425ACF22000DABDA3 /* SwiftDateDynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9C22325ACF22000DABDA3 /* SwiftDateDynamic */; };
-		41A9C22525ACF22000DABDA3 /* SwiftDateDynamic in Embed Frameworks */ = {isa = PBXBuildFile; productRef = 41A9C22325ACF22000DABDA3 /* SwiftDateDynamic */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
-		41A9C22725ACF22000DABDA3 /* SwiftDateStatic in Frameworks */ = {isa = PBXBuildFile; productRef = 41A9C22625ACF22000DABDA3 /* SwiftDateStatic */; };
+		41AF853425ACF742006AB8EA /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 41AF853325ACF742006AB8EA /* SwiftDate */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -38,7 +35,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				41A9C22525ACF22000DABDA3 /* SwiftDateDynamic in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -67,9 +63,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				41A9C22425ACF22000DABDA3 /* SwiftDateDynamic in Frameworks */,
-				41A9C22225ACF22000DABDA3 /* SwiftDate in Frameworks */,
-				41A9C22725ACF22000DABDA3 /* SwiftDateStatic in Frameworks */,
+				41AF853425ACF742006AB8EA /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -153,9 +147,7 @@
 			);
 			name = "HypedList (iOS)";
 			packageProductDependencies = (
-				41A9C22125ACF22000DABDA3 /* SwiftDate */,
-				41A9C22325ACF22000DABDA3 /* SwiftDateDynamic */,
-				41A9C22625ACF22000DABDA3 /* SwiftDateStatic */,
+				41AF853325ACF742006AB8EA /* SwiftDate */,
 			);
 			productName = "HypedList (iOS)";
 			productReference = 41024C9625AA384A004ABF1A /* HypedList.app */;
@@ -205,7 +197,7 @@
 			);
 			mainGroup = 41024C8925AA3839004ABF1A;
 			packageReferences = (
-				41A9C22025ACF22000DABDA3 /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				41AF853225ACF742006AB8EA /* XCRemoteSwiftPackageReference "SwiftDate" */,
 			);
 			productRefGroup = 41024C9725AA384A004ABF1A /* Products */;
 			projectDirPath = "";
@@ -507,7 +499,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		41A9C22025ACF22000DABDA3 /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
+		41AF853225ACF742006AB8EA /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
 			requirement = {
@@ -518,20 +510,10 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		41A9C22125ACF22000DABDA3 /* SwiftDate */ = {
+		41AF853325ACF742006AB8EA /* SwiftDate */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 41A9C22025ACF22000DABDA3 /* XCRemoteSwiftPackageReference "SwiftDate" */;
+			package = 41AF853225ACF742006AB8EA /* XCRemoteSwiftPackageReference "SwiftDate" */;
 			productName = SwiftDate;
-		};
-		41A9C22325ACF22000DABDA3 /* SwiftDateDynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 41A9C22025ACF22000DABDA3 /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDateDynamic;
-		};
-		41A9C22625ACF22000DABDA3 /* SwiftDateStatic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 41A9C22025ACF22000DABDA3 /* XCRemoteSwiftPackageReference "SwiftDate" */;
-			productName = SwiftDateStatic;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
