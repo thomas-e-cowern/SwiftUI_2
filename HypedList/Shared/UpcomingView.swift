@@ -10,7 +10,7 @@ import SwiftUI
 struct UpcomingView: View {
     
     @State var showingCreateView = false
-    var hypedEvents: [HypedEvent] = []
+    var hypedEvents: [HypedEvent] = [testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2]
     
     var body: some View {
         ScrollView {

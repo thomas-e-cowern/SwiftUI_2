@@ -24,6 +24,12 @@ class HypedEvent: ObservableObject, Identifiable {
         }
         return nil
     }
+    
+    func dateAsString () -> String {
+        let formatter = DateFormatter()
+        formatter.dateFormat = "MMM d"
+        return formatter.string(from: date)
+    }
 }
 
 var testHypedEvent1: HypedEvent {
