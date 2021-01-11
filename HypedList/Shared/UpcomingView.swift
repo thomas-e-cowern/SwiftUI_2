@@ -10,7 +10,7 @@ import SwiftUI
 struct UpcomingView: View {
     
     @State var showingCreateView = false
-    var hypedEvents: [HypedEvent] = [testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2]
+    var hypedEvents: [HypedEvent] = []
     
     var body: some View {
         ScrollView {
@@ -21,7 +21,7 @@ struct UpcomingView: View {
                         .padding()
                 } else {
                     ForEach(hypedEvents) { hypedEvent in
-                        Text(hypedEvent.title)
+                        HypedEventTileView(hypedEvent: hypedEvent)
                         Circle().foregroundColor(hypedEvent.color)
                     }
                 }
