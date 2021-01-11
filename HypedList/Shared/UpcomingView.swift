@@ -10,17 +10,20 @@ import SwiftUI
 struct UpcomingView: View {
     
     @State var showingCreateView = false
-    var hypedEvents: [HypedEvent] = []
+    var hypedEvents: [HypedEvent] = [testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2]
     
     var body: some View {
-        VStack {
-            if hypedEvents.count == 0 {
-                Text("You need to add some hyped events! 😎\nCreate an event or check out the discover tab!")
-                    .multilineTextAlignment(.center)
-                    .padding()
-            } else {
-                ForEach(hypedEvents) { hypedEvent in
-                    Text(hypedEvent.title)
+        ScrollView {
+            VStack {
+                if hypedEvents.count == 0 {
+                    Text("You need to add some hyped events! 😎\nCreate an event or check out the discover tab!")
+                        .multilineTextAlignment(.center)
+                        .padding()
+                } else {
+                    ForEach(hypedEvents) { hypedEvent in
+                        Text(hypedEvent.title)
+                        Circle().foregroundColor(hypedEvent.color)
+                    }
                 }
             }
         }
@@ -43,7 +46,7 @@ struct UpcomingView_Previews: PreviewProvider {
         
         Group {
             NavigationView {
-                UpcomingView(hypedEvents: [testHypedEvent1, testHypedEvent2])
+                UpcomingView(hypedEvents: [testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2, testHypedEvent1, testHypedEvent2])
             }
             
             NavigationView {
