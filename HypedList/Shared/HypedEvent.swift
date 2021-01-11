@@ -8,7 +8,8 @@
 import Foundation
 import SwiftUI
 
-class HypedEvent: ObservableObject {
+class HypedEvent: ObservableObject, Identifiable {
+    var id = UUID().uuidString
     var date = Date()
     var title = ""
     var url = ""
@@ -23,4 +24,38 @@ class HypedEvent: ObservableObject {
         }
         return nil
     }
+}
+
+var testHypedEvent1: HypedEvent {
+    let hypedEvent = HypedEvent()
+    
+    if let image = UIImage(named: "Leila") {
+        if let data = image.pngData() {
+            hypedEvent.imageData = data
+        }
+    }
+    
+    hypedEvent.title = "Architecture show"
+    hypedEvent.color = .blue
+    hypedEvent.date = Date()
+    hypedEvent.url = "www.yahoo.com"
+    
+    return hypedEvent
+}
+
+var testHypedEvent2: HypedEvent {
+    let hypedEvent = HypedEvent()
+    
+//    if let image = UIImage(named: "Leila") {
+//        if let data = image.pngData() {
+//            hypedEvent.imageData = data
+//        }
+//    }
+    
+    hypedEvent.title = "Family gathering show"
+    hypedEvent.color = .red
+    hypedEvent.date = Date()
+    hypedEvent.url = "www.google.com"
+    
+    return hypedEvent
 }

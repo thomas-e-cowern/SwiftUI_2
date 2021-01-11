@@ -10,25 +10,45 @@ import SwiftUI
 struct UpcomingView: View {
     
     @State var showingCreateView = false
+    var hypedEvents: [HypedEvent] = []
     
     var body: some View {
-        Text("Upcoming")
-            .navigationTitle("Upcoming")
-            .navigationBarItems(trailing:
-                                    Button(action: {
-                                        showingCreateView = true
-                                    }) {
-                                        Image(systemName: "calendar.badge.plus")
-                                    }
-                                    .sheet(isPresented: $showingCreateView) {
-                                        CreateHypedEventView()
-                                    }
-            )
+        VStack {
+            if hypedEvents.count == 0 {
+                Text("You need to add some hyped events! 😎\nCreate an event or check out the discover tab!")
+                    .multilineTextAlignment(.center)
+                    .padding()
+            } else {
+                ForEach(hypedEvents) { hypedEvent in
+                    Text(hypedEvent.title)
+                }
+            }
+        }
+        .navigationTitle("Upcoming")
+        .navigationBarItems(trailing:
+                                Button(action: {
+                                    showingCreateView = true
+                                }) {
+                                    Image(systemName: "calendar.badge.plus")
+                                }
+                                .sheet(isPresented: $showingCreateView) {
+                                    CreateHypedEventView()
+                                }
+        )
     }
 }
 
 struct UpcomingView_Previews: PreviewProvider {
     static var previews: some View {
-        UpcomingView()
+        
+        Group {
+            NavigationView {
+                UpcomingView(hypedEvents: [testHypedEvent1, testHypedEvent2])
+            }
+            
+            NavigationView {
+                UpcomingView(hypedEvents: [])
+            }
+        }
     }
 }
