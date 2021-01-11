@@ -22,7 +22,6 @@ struct UpcomingView: View {
                 } else {
                     ForEach(hypedEvents) { hypedEvent in
                         HypedEventTileView(hypedEvent: hypedEvent)
-                        Circle().foregroundColor(hypedEvent.color)
                     }
                 }
             }
