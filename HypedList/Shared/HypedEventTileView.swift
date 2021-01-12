@@ -38,7 +38,7 @@ struct HypedEventTileView: View {
                     .foregroundColor(.red)
                 Text(hypedEvent.dateAsString())
                 Spacer()
-                Text("Sept 4th, 2021")
+                Text(hypedEvent.timeFromNow())
                 Image(systemName: "clock.fill")
                     .foregroundColor(.blue)
             }

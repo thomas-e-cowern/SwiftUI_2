@@ -28,8 +28,18 @@ class HypedEvent: ObservableObject, Identifiable {
     
     func dateAsString () -> String {
         let formatter = DateFormatter()
-        formatter.dateFormat = "MMM d"
+        if date.compare(.isThisYear) {
+            formatter.dateFormat = "MMM d"
+        } else {
+            formatter.dateFormat = "MMM d yyyy"
+        }
+        
         return formatter.string(from: date)
+    }
+    
+    func timeFromNow () -> String {
+        return date.toRelative()
+        
     }
 }
 
@@ -44,7 +54,7 @@ var testHypedEvent1: HypedEvent {
     
     hypedEvent.title = "Architecture show"
     hypedEvent.color = .blue
-    hypedEvent.date = Date() + 4.days
+    hypedEvent.date = Date() + 4.days + 1.years
     hypedEvent.url = "www.yahoo.com"
     
     return hypedEvent
