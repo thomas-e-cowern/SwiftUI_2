@@ -23,6 +23,7 @@
 		41024CC725AB6D61004ABF1A /* FormLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CC525AB6D60004ABF1A /* FormLabelView.swift */; };
 		41024CCB25AB841E004ABF1A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CCA25AB841E004ABF1A /* ImagePicker.swift */; };
 		41024CCC25AB841E004ABF1A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CCA25AB841E004ABF1A /* ImagePicker.swift */; };
+		41440FA225ADE3B600CFDA26 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 41440FA125ADE3B600CFDA26 /* UIColor_Hex_Swift */; };
 		41A9C21A25ACAC1600DABDA3 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */; };
 		41A9C21B25ACAC1600DABDA3 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */; };
 		41AF853425ACF742006AB8EA /* SwiftDate in Frameworks */ = {isa = PBXBuildFile; productRef = 41AF853325ACF742006AB8EA /* SwiftDate */; };
@@ -66,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				41440FA225ADE3B600CFDA26 /* UIColor_Hex_Swift in Frameworks */,
 				41AF853425ACF742006AB8EA /* SwiftDate in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -93,15 +95,10 @@
 		41024C8E25AA383A004ABF1A /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				41AF853C25ADE032006AB8EA /* Views */,
+				41AF853B25ADE021006AB8EA /* Data */,
 				41024C8F25AA383A004ABF1A /* HypedListApp.swift */,
 				41024C9025AA383A004ABF1A /* HypedListTabView.swift */,
-				41024CB625AA3ACA004ABF1A /* UpcomingView.swift */,
-				41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */,
-				41024CC525AB6D60004ABF1A /* FormLabelView.swift */,
-				41024CC025AB2D47004ABF1A /* HypedEvent.swift */,
-				41AF853725ADCD53006AB8EA /* DataController.swift */,
-				41024CBB25AB2BCE004ABF1A /* CreateHypedEventView.swift */,
-				41024CCA25AB841E004ABF1A /* ImagePicker.swift */,
 				41024C9125AA384A004ABF1A /* Assets.xcassets */,
 			);
 			path = Shared;
@@ -133,6 +130,27 @@
 			path = macOS;
 			sourceTree = "<group>";
 		};
+		41AF853B25ADE021006AB8EA /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				41024CC025AB2D47004ABF1A /* HypedEvent.swift */,
+				41AF853725ADCD53006AB8EA /* DataController.swift */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		41AF853C25ADE032006AB8EA /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				41024CC525AB6D60004ABF1A /* FormLabelView.swift */,
+				41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */,
+				41024CB625AA3ACA004ABF1A /* UpcomingView.swift */,
+				41024CBB25AB2BCE004ABF1A /* CreateHypedEventView.swift */,
+				41024CCA25AB841E004ABF1A /* ImagePicker.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -152,6 +170,7 @@
 			name = "HypedList (iOS)";
 			packageProductDependencies = (
 				41AF853325ACF742006AB8EA /* SwiftDate */,
+				41440FA125ADE3B600CFDA26 /* UIColor_Hex_Swift */,
 			);
 			productName = "HypedList (iOS)";
 			productReference = 41024C9625AA384A004ABF1A /* HypedList.app */;
@@ -202,6 +221,7 @@
 			mainGroup = 41024C8925AA3839004ABF1A;
 			packageReferences = (
 				41AF853225ACF742006AB8EA /* XCRemoteSwiftPackageReference "SwiftDate" */,
+				41440FA025ADE3B600CFDA26 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */,
 			);
 			productRefGroup = 41024C9725AA384A004ABF1A /* Products */;
 			projectDirPath = "";
@@ -505,6 +525,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		41440FA025ADE3B600CFDA26 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yeahdongcn/UIColor-Hex-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 		41AF853225ACF742006AB8EA /* XCRemoteSwiftPackageReference "SwiftDate" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/malcommac/SwiftDate.git";
@@ -516,6 +544,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		41440FA125ADE3B600CFDA26 /* UIColor_Hex_Swift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 41440FA025ADE3B600CFDA26 /* XCRemoteSwiftPackageReference "UIColor-Hex-Swift" */;
+			productName = UIColor_Hex_Swift;
+		};
 		41AF853325ACF742006AB8EA /* SwiftDate */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 41AF853225ACF742006AB8EA /* XCRemoteSwiftPackageReference "SwiftDate" */;
