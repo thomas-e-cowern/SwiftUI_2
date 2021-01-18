@@ -23,6 +23,9 @@
 		41024CC725AB6D61004ABF1A /* FormLabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CC525AB6D60004ABF1A /* FormLabelView.swift */; };
 		41024CCB25AB841E004ABF1A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CCA25AB841E004ABF1A /* ImagePicker.swift */; };
 		41024CCC25AB841E004ABF1A /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41024CCA25AB841E004ABF1A /* ImagePicker.swift */; };
+		4136D2F525AF2A48008C6E83 /* HypedEventListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136D2F425AF2A48008C6E83 /* HypedEventListView.swift */; };
+		4136D2FA25AF3A3C008C6E83 /* PastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136D2F925AF3A3C008C6E83 /* PastView.swift */; };
+		4136D2FB25AF3A3C008C6E83 /* PastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4136D2F925AF3A3C008C6E83 /* PastView.swift */; };
 		41440FA225ADE3B600CFDA26 /* UIColor_Hex_Swift in Frameworks */ = {isa = PBXBuildFile; productRef = 41440FA125ADE3B600CFDA26 /* UIColor_Hex_Swift */; };
 		41A9C21A25ACAC1600DABDA3 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */; };
 		41A9C21B25ACAC1600DABDA3 /* HypedEventTileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */; };
@@ -58,6 +61,8 @@
 		41024CC025AB2D47004ABF1A /* HypedEvent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEvent.swift; sourceTree = "<group>"; };
 		41024CC525AB6D60004ABF1A /* FormLabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormLabelView.swift; sourceTree = "<group>"; };
 		41024CCA25AB841E004ABF1A /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
+		4136D2F425AF2A48008C6E83 /* HypedEventListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventListView.swift; sourceTree = "<group>"; };
+		4136D2F925AF3A3C008C6E83 /* PastView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PastView.swift; sourceTree = "<group>"; };
 		41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HypedEventTileView.swift; sourceTree = "<group>"; };
 		41AF853725ADCD53006AB8EA /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -142,9 +147,11 @@
 		41AF853C25ADE032006AB8EA /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4136D2F425AF2A48008C6E83 /* HypedEventListView.swift */,
 				41024CC525AB6D60004ABF1A /* FormLabelView.swift */,
 				41A9C21925ACAC1500DABDA3 /* HypedEventTileView.swift */,
 				41024CB625AA3ACA004ABF1A /* UpcomingView.swift */,
+				4136D2F925AF3A3C008C6E83 /* PastView.swift */,
 				41024CBB25AB2BCE004ABF1A /* CreateHypedEventView.swift */,
 				41024CCA25AB841E004ABF1A /* ImagePicker.swift */,
 			);
@@ -259,12 +266,14 @@
 			files = (
 				41A9C21A25ACAC1600DABDA3 /* HypedEventTileView.swift in Sources */,
 				41024CBC25AB2BCE004ABF1A /* CreateHypedEventView.swift in Sources */,
+				4136D2FA25AF3A3C008C6E83 /* PastView.swift in Sources */,
 				41024CC625AB6D61004ABF1A /* FormLabelView.swift in Sources */,
 				41024CC125AB2D47004ABF1A /* HypedEvent.swift in Sources */,
 				41AF853825ADCD54006AB8EA /* DataController.swift in Sources */,
 				41024CCB25AB841E004ABF1A /* ImagePicker.swift in Sources */,
 				41024CA425AA384A004ABF1A /* HypedListTabView.swift in Sources */,
 				41024CA225AA384A004ABF1A /* HypedListApp.swift in Sources */,
+				4136D2F525AF2A48008C6E83 /* HypedEventListView.swift in Sources */,
 				41024CB725AA3ACA004ABF1A /* UpcomingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +286,7 @@
 				41024CBD25AB2BCF004ABF1A /* CreateHypedEventView.swift in Sources */,
 				41024CC725AB6D61004ABF1A /* FormLabelView.swift in Sources */,
 				41024CC225AB2D47004ABF1A /* HypedEvent.swift in Sources */,
+				4136D2FB25AF3A3C008C6E83 /* PastView.swift in Sources */,
 				41AF853925ADCD54006AB8EA /* DataController.swift in Sources */,
 				41024CCC25AB841E004ABF1A /* ImagePicker.swift in Sources */,
 				41024CA525AA384A004ABF1A /* HypedListTabView.swift in Sources */,
