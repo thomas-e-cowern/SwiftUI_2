@@ -54,6 +54,11 @@ class AudioRecorder: NSObject, ObservableObject {
         do {
                 audioRecorder = try AVAudioRecorder(url: audioFileName, settings: settings)
                 audioRecorder.record()
+            
+            _ = Timer.scheduledTimer(withTimeInterval: 60.0, repeats: false) { timer in
+                    print("Timer fired!")
+                self.stopRecording()
+                }
 
                 recording = true
         } catch {

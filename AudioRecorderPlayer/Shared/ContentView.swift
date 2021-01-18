@@ -14,7 +14,7 @@ struct ContentView: View {
     var body: some View {
         NavigationView {
             VStack {
-                
+                TimerView()
                 RecordingList(audioRecorder: AudioRecorder())
                 
                 if audioRecorder.recording == false {

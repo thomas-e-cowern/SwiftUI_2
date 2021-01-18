@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		411B2DAF25B5B8E700A246D1 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411B2DAE25B5B8E700A246D1 /* TimerView.swift */; };
+		411B2DB025B5B8E700A246D1 /* TimerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411B2DAE25B5B8E700A246D1 /* TimerView.swift */; };
 		4145EF4A25B37B8A004FFD23 /* AudioRecorderPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4145EF3725B37B7E004FFD23 /* AudioRecorderPlayerApp.swift */; };
 		4145EF4B25B37B8A004FFD23 /* AudioRecorderPlayerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4145EF3725B37B7E004FFD23 /* AudioRecorderPlayerApp.swift */; };
 		4145EF4C25B37B8A004FFD23 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4145EF3825B37B7E004FFD23 /* ContentView.swift */; };
@@ -28,6 +30,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		411B2DAE25B5B8E700A246D1 /* TimerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerView.swift; sourceTree = "<group>"; };
 		4145EF3725B37B7E004FFD23 /* AudioRecorderPlayerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRecorderPlayerApp.swift; sourceTree = "<group>"; };
 		4145EF3825B37B7E004FFD23 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4145EF3925B37B8A004FFD23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -76,6 +79,7 @@
 			isa = PBXGroup;
 			children = (
 				4145EF6125B37EF2004FFD23 /* RecordingList.swift */,
+				411B2DAE25B5B8E700A246D1 /* TimerView.swift */,
 				41C3CC1625B46FBD00313685 /* AudioPlayer.swift */,
 				4145EF3725B37B7E004FFD23 /* AudioRecorderPlayerApp.swift */,
 				4145EF3825B37B7E004FFD23 /* ContentView.swift */,
@@ -211,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411B2DAF25B5B8E700A246D1 /* TimerView.swift in Sources */,
 				4145EF6B25B38C62004FFD23 /* Extensions.swift in Sources */,
 				4145EF7725B3CB05004FFD23 /* Helper.swift in Sources */,
 				4145EF5B25B37BD9004FFD23 /* AudioRecorder.swift in Sources */,
@@ -226,6 +231,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411B2DB025B5B8E700A246D1 /* TimerView.swift in Sources */,
 				4145EF6C25B38C62004FFD23 /* Extensions.swift in Sources */,
 				4145EF7825B3CB05004FFD23 /* Helper.swift in Sources */,
 				4145EF5C25B37BD9004FFD23 /* AudioRecorder.swift in Sources */,
