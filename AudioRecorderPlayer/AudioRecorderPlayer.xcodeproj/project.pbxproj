@@ -27,6 +27,8 @@
 		4145EF7825B3CB05004FFD23 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4145EF7625B3CB05004FFD23 /* Helper.swift */; };
 		41C3CC1725B46FBD00313685 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C3CC1625B46FBD00313685 /* AudioPlayer.swift */; };
 		41C3CC1825B46FBE00313685 /* AudioPlayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C3CC1625B46FBD00313685 /* AudioPlayer.swift */; };
+		41E7539525B5CCCA0047A22B /* AudioTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E7539425B5CCCA0047A22B /* AudioTimer.swift */; };
+		41E7539625B5CCCA0047A22B /* AudioTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41E7539425B5CCCA0047A22B /* AudioTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -45,6 +47,7 @@
 		4145EF7125B3C95E004FFD23 /* RecordingDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordingDataModel.swift; sourceTree = "<group>"; };
 		4145EF7625B3CB05004FFD23 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		41C3CC1625B46FBD00313685 /* AudioPlayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioPlayer.swift; sourceTree = "<group>"; };
+		41E7539425B5CCCA0047A22B /* AudioTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 				4145EF3825B37B7E004FFD23 /* ContentView.swift */,
 				4145EF7125B3C95E004FFD23 /* RecordingDataModel.swift */,
 				4145EF5A25B37BD9004FFD23 /* AudioRecorder.swift */,
+				41E7539425B5CCCA0047A22B /* AudioTimer.swift */,
 				4145EF7625B3CB05004FFD23 /* Helper.swift */,
 				4145EF6A25B38C62004FFD23 /* Extensions.swift */,
 				4145EF3925B37B8A004FFD23 /* Assets.xcassets */,
@@ -223,6 +227,7 @@
 				4145EF4C25B37B8A004FFD23 /* ContentView.swift in Sources */,
 				4145EF7225B3C95F004FFD23 /* RecordingDataModel.swift in Sources */,
 				4145EF4A25B37B8A004FFD23 /* AudioRecorderPlayerApp.swift in Sources */,
+				41E7539525B5CCCA0047A22B /* AudioTimer.swift in Sources */,
 				4145EF6225B37EF2004FFD23 /* RecordingList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -239,6 +244,7 @@
 				4145EF4D25B37B8A004FFD23 /* ContentView.swift in Sources */,
 				4145EF7325B3C95F004FFD23 /* RecordingDataModel.swift in Sources */,
 				4145EF4B25B37B8A004FFD23 /* AudioRecorderPlayerApp.swift in Sources */,
+				41E7539625B5CCCA0047A22B /* AudioTimer.swift in Sources */,
 				4145EF6325B37EF2004FFD23 /* RecordingList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

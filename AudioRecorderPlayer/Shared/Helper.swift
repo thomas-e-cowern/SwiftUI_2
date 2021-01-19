@@ -8,14 +8,16 @@
 import Foundation
 
 
-class Helper {
-    func getCreationDate(for file: URL) -> Date {
-        if let attributes = try? FileManager.default.attributesOfItem(atPath: file.path) as [FileAttributeKey: Any],
-            let creationDate = attributes[FileAttributeKey.creationDate] as? Date {
-            return creationDate
-        } else {
-            return Date()
-        }
-    }
+enum TimerMode {
+    case running
+    case ended
 }
 
+func secondsToMinutesAndSeconds (seconds: Int) -> String {
+    let minutes = ""
+    let seconds = ""
+    let minuteStamp = minutes.count > 1 ? minutes : "0" + minutes
+    let secondStamp = seconds.count > 1 ? seconds : "0" + seconds
+    
+    return "\(minuteStamp) : \(secondStamp)"
+}
