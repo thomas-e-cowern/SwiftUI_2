@@ -11,6 +11,8 @@ import Combine
 class TaskCellViewModel: ObservableObject, Identifiable {
     @Published var task : Task
     
+    @Published var taskRepository = TaskRepository()
+    
     var id = ""
     @Published var completionStateIconName = ""
     
@@ -31,6 +33,14 @@ class TaskCellViewModel: ObservableObject, Identifiable {
                 task.id
             }
             .assign(to: \.id, on: self)
+            .store(in: &cancellables)
+        
+        $task
+            .dropFirst()
+            .debounce(for: 1.0, scheduler: RunLoop.main)
+            .sink { task in
+                self.taskRepository.updateTask(task: task)
+            }
             .store(in: &cancellables)
     }
     

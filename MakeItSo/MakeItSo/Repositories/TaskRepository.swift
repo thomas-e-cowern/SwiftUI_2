@@ -20,7 +20,9 @@ class TaskRepository : ObservableObject {
     }
     
     func loadData () {
-        db.collection("tasks").addSnapshotListener{ (querySnapshot, error) in
+        db.collection("tasks")
+            .order(by: "createdTime")
+            .addSnapshotListener{ (querySnapshot, error) in
             if let querySnapshot = querySnapshot {
                 self.tasks = querySnapshot.documents.compactMap { document in
                     do {
@@ -44,5 +46,15 @@ class TaskRepository : ObservableObject {
             fatalError("unable to encode task.  \(error.localizedDescription)")
         }
         
+    }
+    
+    func updateTask (task: Task) {
+        if let taskID = task.id {
+            do {
+                try db.collection("tasks").document(taskID).setData(from: task)
+            } catch {
+                fatalError("Unable to encode task: \(error.localizedDescription)")
+            }
+        }
     }
 }
