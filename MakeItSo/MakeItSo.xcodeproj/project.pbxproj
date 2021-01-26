@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		065CFA89470E669D5B562CA7 /* Pods_MakeItSo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 72FBD2ECCFF6DE0B091B90DA /* Pods_MakeItSo.framework */; };
+		412BF8CC25C070190069F649 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BF8CB25C070190069F649 /* SignInWithAppleButton.swift */; };
+		412BF8CF25C070E50069F649 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BF8CE25C070E40069F649 /* SignInView.swift */; };
+		412BF8D325C07D2C0069F649 /* SignInWithAppleCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 412BF8D225C07D2C0069F649 /* SignInWithAppleCoordinator.swift */; };
 		4168937025BF8E5C00374A67 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4168936F25BF8E5B00374A67 /* GoogleService-Info.plist */; };
 		416893A725BFA07D00374A67 /* TaskRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 416893A625BFA07D00374A67 /* TaskRepository.swift */; };
 		41C50E8325BF3A3E005F805A /* MakeItSoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C50E8225BF3A3E005F805A /* MakeItSoApp.swift */; };
@@ -20,6 +23,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		412BF8CB25C070190069F649 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		412BF8CE25C070E40069F649 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		412BF8D225C07D2C0069F649 /* SignInWithAppleCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleCoordinator.swift; sourceTree = "<group>"; };
+		412BF8D625C083240069F649 /* MakeItSo.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MakeItSo.entitlements; sourceTree = "<group>"; };
 		4168936F25BF8E5B00374A67 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		416893A625BFA07D00374A67 /* TaskRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskRepository.swift; sourceTree = "<group>"; };
 		41C50E7F25BF3A3E005F805A /* MakeItSo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MakeItSo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,6 +64,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		412BF8D125C07D030069F649 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				412BF8D225C07D2C0069F649 /* SignInWithAppleCoordinator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		416893A525BFA05100374A67 /* Repositories */ = {
 			isa = PBXGroup;
 			children = (
@@ -86,6 +101,8 @@
 		41C50E8125BF3A3E005F805A /* MakeItSo */ = {
 			isa = PBXGroup;
 			children = (
+				412BF8D625C083240069F649 /* MakeItSo.entitlements */,
+				412BF8D125C07D030069F649 /* Services */,
 				416893A525BFA05100374A67 /* Repositories */,
 				41C50E9A25BF4963005F805A /* ViewModels */,
 				41C50E9725BF3CCC005F805A /* Views */,
@@ -119,6 +136,8 @@
 			isa = PBXGroup;
 			children = (
 				41C50E8425BF3A3E005F805A /* TaskListView.swift */,
+				412BF8CB25C070190069F649 /* SignInWithAppleButton.swift */,
+				412BF8CE25C070E40069F649 /* SignInView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -257,9 +276,12 @@
 				416893A725BFA07D00374A67 /* TaskRepository.swift in Sources */,
 				41C50E8525BF3A3E005F805A /* TaskListView.swift in Sources */,
 				41C50E9C25BF49A1005F805A /* TaskCellViewModel.swift in Sources */,
+				412BF8D325C07D2C0069F649 /* SignInWithAppleCoordinator.swift in Sources */,
 				41C50E9F25BF515A005F805A /* TaskListViewModel.swift in Sources */,
 				41C50E9425BF3AA2005F805A /* Task.swift in Sources */,
 				41C50E8325BF3A3E005F805A /* MakeItSoApp.swift in Sources */,
+				412BF8CF25C070E50069F649 /* SignInView.swift in Sources */,
+				412BF8CC25C070190069F649 /* SignInWithAppleButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -388,6 +410,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MakeItSo/MakeItSo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MakeItSo/Preview Content\"";
 				DEVELOPMENT_TEAM = 56F54J4H3N;
@@ -411,6 +434,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = MakeItSo/MakeItSo.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"MakeItSo/Preview Content\"";
 				DEVELOPMENT_TEAM = 56F54J4H3N;
