@@ -88,8 +88,7 @@ struct CreateHypedEventView: View {
             .navigationBarItems(leading: Button(action: {presentationMode.wrappedValue.dismiss()}) {
                 Text("Cancel")
             }, trailing: Button(action: {
-                DataController.shared.hypedEvents.append(hypedEvent)
-                DataController.shared.saveData()
+                DataController.shared.savedHypedEvent(hypedEvent: hypedEvent)
                 presentationMode.wrappedValue.dismiss()
             }) {
                 Text("Done")

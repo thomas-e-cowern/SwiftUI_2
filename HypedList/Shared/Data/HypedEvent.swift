@@ -11,11 +11,11 @@ import SwiftDate
 import UIColor_Hex_Swift
 
 class HypedEvent: ObservableObject, Identifiable, Codable {
-    var id = UUID().uuidString
-    var date = Date()
-    var title = ""
-    var url = ""
-    var color = Color.purple
+    @Published var id = UUID().uuidString
+    @Published var date = Date()
+    @Published var title = ""
+    @Published var url = ""
+    @Published var color = Color.purple
     @Published var imageData: Data?
     
     enum CodingKeys: String, CodingKey {
@@ -52,6 +52,18 @@ class HypedEvent: ObservableObject, Identifiable, Codable {
         
     }
     
+    var hasBeenAdded : Bool {
+        let hypedEvent = DataController.shared.hypedEvents.first { (hypedEvent) -> Bool in
+            return hypedEvent.id == self.id
+        }
+        
+        if hypedEvent != nil {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     func image() -> Image? {
         if let data = imageData {
             if let uiImage = UIImage(data: data) {
@@ -75,6 +87,11 @@ class HypedEvent: ObservableObject, Identifiable, Codable {
     func timeFromNow () -> String {
         return date.toRelative()
         
+    }
+    
+    func validUrl () -> URL? {
+        print("********* validurl: \(String(describing: URL(string: url))) **********")
+        return URL(string: url)
     }
 }
 

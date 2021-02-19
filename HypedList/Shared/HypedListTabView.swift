@@ -17,7 +17,9 @@ struct HypedListTabView: View {
                         Image(systemName: "calendar.badge.plus")
                         Text("Upcoming")
                     }.tag(1)
-                Text("Tab Content 2")
+            NavigationView {
+                DiscoverView()
+            }
                     .tabItem {
                         Image(systemName: "magnifyingglass.circle.fill")
                         Text("Discover") }.tag(2)
