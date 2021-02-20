@@ -17,8 +17,30 @@ struct SettingsView: View {
         NavigationView {
             ScrollView (.vertical, showsIndicators: false) {
                 VStack (spacing: 20) {
+                    // MARK:  Section 1
                     
-                    Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                    GroupBox(
+                        label:
+                            SettingsLabelView(labelText: "FRUCTUS", labelImage: "info.circle"),
+                        content: {
+                            Divider().padding(.vertical, 4)
+                            HStack (alignment: .center, spacing: 10) {
+                                Image("logo")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .cornerRadius(9.0)
+                                
+                                Text("Most fruits are naturally low in fat, sodium and calories.  None have cholestoral.  Fruits arre sources of many essential nutrients that provide the raw materials for a healthy lifestyle")
+                                    .font(.footnote)
+                            }
+                    })
+                    
+                    // MARK:  Section 2
+                    
+                    
+                    // MARK:  Section 3
+                    
                 }// end of vstack
                 .navigationBarTitle(Text("Settings"), displayMode: .large)
                 .navigationBarItems(trailing: Button(action:{
