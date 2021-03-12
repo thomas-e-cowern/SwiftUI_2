@@ -18,7 +18,7 @@ struct ContentView: View {
             
             }
             .navigationBarTitle("Good News")
-            .customNavbarColor(.blue)
+            .customNavbarColor(.gray)
         }
     }
 }
