@@ -8,7 +8,7 @@
 import Foundation
 import SwiftUI
 
-struct NavigationBarModifier: ViewModifier {
+struct CustomNavigationBar: ViewModifier {
         
     var backgroundColor: UIColor?
     
