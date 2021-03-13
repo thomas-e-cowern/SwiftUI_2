@@ -17,7 +17,20 @@ class WebService {
                 print(error.localizedDescription)
                 completion([])
             } else if let data = data {
-                print(data)
+                
+                print("Data:", data)
+                
+                do {
+                    let articleList = try JSONDecoder().decode(ArticleList.self, from: data)
+                    
+                    print("AL:", articleList)
+                
+                    
+                    print(articleList.articles as Any)
+                } catch let jsonError as NSError {
+                    print("JSON decode failed: \(jsonError.localizedDescription)")
+                }
+                return
             }
             
         }.resume()
