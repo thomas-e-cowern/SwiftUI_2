@@ -9,9 +9,13 @@ import SwiftUI
 
 @main
 struct GoodNewsApp: App {
+    
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .onAppear {
+                    DataController.shared.getNewsHeadlines()
+                }
         }
     }
 }
