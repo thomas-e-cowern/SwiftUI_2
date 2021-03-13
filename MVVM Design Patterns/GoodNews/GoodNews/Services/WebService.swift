@@ -10,9 +10,9 @@ import Foundation
 class WebService {
     
     func getArticles(url: URL, completion: @escaping ([Article]) -> ()) {
-        print("Inside web service")
+
         URLSession.shared.dataTask(with: url) { data, response, error in
-            print("inside URLSession")
+
             if let error = error {
                 print(error.localizedDescription)
                 completion([])
@@ -22,11 +22,8 @@ class WebService {
                 
                 do {
                     let articleList = try JSONDecoder().decode(ArticleList.self, from: data)
-                    
-                    print("AL:", articleList)
-                
-                    
-                    print(articleList.articles as Any)
+
+                    print("AL:", articleList.articles as Any)
                 } catch let jsonError as NSError {
                     print("JSON decode failed: \(jsonError.localizedDescription)")
                 }
