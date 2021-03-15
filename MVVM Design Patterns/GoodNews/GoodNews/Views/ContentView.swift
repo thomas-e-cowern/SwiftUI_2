@@ -8,7 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    let articles = DataController.shared.getNewsHeadlines()
+    
     var body: some View {
+        
         NavigationView {
             VStack {
                

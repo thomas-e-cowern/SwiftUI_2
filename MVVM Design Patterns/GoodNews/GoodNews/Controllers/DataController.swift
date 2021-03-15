@@ -7,9 +7,36 @@
 
 import Foundation
 
-class DataController {
+class DataController : ObservableObject {
     
     static var shared = DataController()
+    
+    @Published var articles : [Article] = []
+    
+    func getArticles(url: URL, completion: @escaping ([Article]) -> ()) {
+        
+        URLSession.shared.dataTask(with: url) { data, response, error in
+
+            if let error = error {
+                print(error.localizedDescription)
+                completion([])
+            } else if let data = data {
+                
+                print("Data:", data)
+                
+                do {
+                    let articleList = try JSONDecoder().decode(ArticleList.self, from: data)
+                    
+                    print("AL:", articleList.articles as Any)
+                } catch let jsonError as NSError {
+                    print("JSON decode failed: \(jsonError.localizedDescription)")
+                }
+                return
+            }
+            
+        }.resume()
+    
+    }
     
     func getNewsHeadlines () {
         
@@ -17,7 +44,7 @@ class DataController {
         
         let webService = WebService()
         
-        webService.getArticles(url: url) { _ in
+        webService.getArticles(url: url) {_ in
             
         }
     }
