@@ -9,17 +9,16 @@ import SwiftUI
 
 struct ContentView: View {
     
-    let articles = DataController.shared.getNewsHeadlines()
+    @State var articles = [Article]()
+    @ObservedObject var data = DataController.shared
     
     var body: some View {
         
         NavigationView {
             VStack {
                
-                List(/*@START_MENU_TOKEN@*/0 ..< 5/*@END_MENU_TOKEN@*/) { item in
-                    Text("a news item...")
-                }
-            
+                ArticleListView(articles: data.articles)
+                    .padding()
             }
             .navigationBarTitle("Good News")
             .customNavbarColor(.gray)

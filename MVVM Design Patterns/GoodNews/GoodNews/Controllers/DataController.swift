@@ -11,42 +11,48 @@ class DataController : ObservableObject {
     
     static var shared = DataController()
     
-    @Published var articles : [Article] = []
+    @Published var articles: [Article] = []
     
-    func getArticles(url: URL, completion: @escaping ([Article]) -> ()) {
-        
-        URLSession.shared.dataTask(with: url) { data, response, error in
-
-            if let error = error {
-                print(error.localizedDescription)
-                completion([])
-            } else if let data = data {
-                
-                print("Data:", data)
-                
-                do {
-                    let articleList = try JSONDecoder().decode(ArticleList.self, from: data)
-                    
-                    print("AL:", articleList.articles as Any)
-                } catch let jsonError as NSError {
-                    print("JSON decode failed: \(jsonError.localizedDescription)")
-                }
-                return
-            }
-            
-        }.resume()
-    
-    }
-    
-    func getNewsHeadlines () {
+    func getArticles() {
         
         guard let url = URL(string: "https://newsapi.org/v2/top-headlines?country=us&apiKey=91918a83b185469c9f81f5af74ae59f9") else { return }
         
-        let webService = WebService()
-        
-        webService.getArticles(url: url) {_ in
-            
-        }
+        URLSession.shared.dataTask(with: url) { [self] data, response, error in
+            if let articleData = data {
+                print("JSON String: \(String(describing: String(data: articleData, encoding: .utf8)))")
+                if let articleJson = try? JSONDecoder().decode(Articles.self, from: articleData) {
+                    print("AL:", articleJson.articles[1].author as Any)
+                    
+                    var newArticles : [Article] = []
+                    
+                    for article in articleJson.articles {
+                        print(article)
+                        
+                        let articleToAdd = Article()
+                        
+                        articleToAdd.title = article.title
+                   
+                        articleToAdd.description = article.description
+                    
+                        articleToAdd.author = article.author
+                        
+                        articleToAdd.content = article.content
+                        
+                        articleToAdd.url = article.url
+
+                        newArticles.append(articleToAdd)
+                    }
+                    
+                   
+                    
+                    DispatchQueue.main.async {
+                        self.articles = newArticles
+                    }
+//                    print("Articles: ", articles[3].title as Any) 
+                    return
+                }
+            }
+        }.resume()
     }
 }
 

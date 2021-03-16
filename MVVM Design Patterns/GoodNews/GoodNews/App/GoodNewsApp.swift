@@ -14,7 +14,7 @@ struct GoodNewsApp: App {
         WindowGroup {
             ContentView()
                 .onAppear {
-                    DataController.shared.getNewsHeadlines()
+                    DataController.shared.getArticles()
                 }
         }
     }

@@ -9,6 +9,8 @@ import Foundation
 
 class WebService {
     
+    var articleList = ArticleList()
+    
     func getArticles(url: URL, completion: @escaping ([Article]) -> ()) {
         
         URLSession.shared.dataTask(with: url) { data, response, error in
@@ -21,7 +23,7 @@ class WebService {
                 print("Data:", data)
                 
                 do {
-                    let articleList = try JSONDecoder().decode(ArticleList.self, from: data)
+                    articleList = try JSONDecoder().decode(ArticleList.self, from: data)
                     
                     print("AL:", articleList.articles as Any)
                 } catch let jsonError as NSError {
