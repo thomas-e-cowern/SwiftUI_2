@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class Article : ObservableObject, Codable, Identifiable {
     
@@ -16,6 +17,7 @@ class Article : ObservableObject, Codable, Identifiable {
     var urlToImage: String?
     var publishedAt: String?
     var content: String?
+    var imageData: Data?
     
     enum CodingKeys: String, CodingKey {
         case author
@@ -25,6 +27,7 @@ class Article : ObservableObject, Codable, Identifiable {
         case urlToImage
         case publishedAt
         case content
+        case imageData
     }
     
     required init(from decoder: Decoder) throws {
@@ -36,10 +39,20 @@ class Article : ObservableObject, Codable, Identifiable {
         urlToImage = try? values.decode(String.self, forKey: .urlToImage)
         publishedAt = try? values.decode(String.self, forKey: .publishedAt)
         content = try? values.decode(String.self, forKey: .content)
+        imageData = try? values.decode(Data.self, forKey: .imageData)
     }
     
     init() {
         
+    }
+    
+    func image() -> Image? {
+        if let data = imageData {
+            if let uiImage = UIImage(data: data) {
+                return Image(uiImage: uiImage)
+            }
+        }
+        return nil
     }
 }
 
@@ -52,6 +65,12 @@ struct Articles : Decodable {
 
 var testArticle1 : Article {
     let article = Article()
+    
+    if let image = UIImage(named: "Leila") {
+            if let data = image.pngData() {
+                article.imageData = data
+            }
+        }
     
     article.title = "Article one title"
     article.description = "Article one description"

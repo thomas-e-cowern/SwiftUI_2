@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class DataController : ObservableObject {
     
@@ -39,16 +40,19 @@ class DataController : ObservableObject {
                         articleToAdd.content = article.content
                         
                         articleToAdd.url = article.url
-
+                        
+                        if let imageUrl = article.urlToImage {
+                            if let url = URL(string: imageUrl) {
+                                 if let data = try? Data(contentsOf: url) {
+                                    articleToAdd.imageData = data
+                                }
+                            }
+                        }
                         newArticles.append(articleToAdd)
                     }
-                    
-                   
-                    
                     DispatchQueue.main.async {
                         self.articles = newArticles
                     }
-//                    print("Articles: ", articles[3].title as Any) 
                     return
                 }
             }

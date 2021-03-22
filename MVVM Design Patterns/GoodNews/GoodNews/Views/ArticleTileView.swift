@@ -12,11 +12,20 @@ struct ArticleTileView: View {
     var article : Article
     
     var body: some View {
-        Text(article.title ?? "No title available")
-            .padding()
-            .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100, maxHeight: .infinity, alignment: .center)
-            .border(Color.black, width: 3)
-            .cornerRadius(5)
+        
+        HStack {
+            if article.image() != nil {
+                article.image()?
+                    .resizable()
+                    .frame(width: 100, height: 100)
+            }
+            
+            Text(article.title ?? "No title available")
+                .padding()
+                .frame(minWidth: 0, idealWidth: 100, maxWidth: .infinity, minHeight: 0, idealHeight: 100, maxHeight: .infinity, alignment: .center)
+        }
+        .border(Color.black, width: 3)
+        .cornerRadius(5)
     }
 }
 

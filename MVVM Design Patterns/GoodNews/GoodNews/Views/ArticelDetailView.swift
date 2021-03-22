@@ -14,6 +14,14 @@ struct ArticelDetailView: View {
     var body: some View {
         VStack (alignment: .leading, spacing: 10) {
             
+            if article.image() != nil {
+                article.image()?
+                    .resizable()
+                    .aspectRatio(contentMode: .fit)
+            }
+            
+            Spacer()
+            
             Text(article.title ?? "No article title")
                 .font(.headline)
                 .fontWeight(.heavy)
@@ -37,7 +45,11 @@ struct ArticelDetailView: View {
                 }
                 .padding()
             }
+            
+            Spacer()
         }
+        .navigationBarTitleDisplayMode(.inline)
+        .customNavbarColor(.gray)
     }
 }
 

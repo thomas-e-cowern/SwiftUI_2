@@ -19,7 +19,6 @@ struct ArticleListView: View {
                     NavigationLink(
                         destination: ArticelDetailView(article: article)) {
                         ArticleTileView(article: article)
-                            .padding()
                     }
                 }
             }
@@ -30,6 +29,6 @@ struct ArticleListView: View {
 struct ArticleView_Previews: PreviewProvider {
     
     static var previews: some View {
-        ArticleListView(articles: [testArticle2])
+        ArticleListView(articles: [testArticle1, testArticle2])
     }
 }
