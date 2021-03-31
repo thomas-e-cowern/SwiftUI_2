@@ -15,13 +15,13 @@ struct BrandGridView: View {
     var body: some View {
         ScrollView (.horizontal, showsIndicators: false, content: {
             LazyHGrid(rows: gridLayout, alignment: .center, spacing: columnSpacing, pinnedViews: [], content: {
-                Section (header: SectionView(rotateClockwise: false), footer: SectionView(rotateClockwise: true)){
+                Section {
                     ForEach(brands) { brand in
                         BrandItemView(brand: brand)
                     }  // For each
                 }  // Section
             })  // Lazy grid
-            .frame(height: 140)
+            .frame(height: 200)
             .padding(.horizontal, 16)
             .padding(.vertical, 10)
         })  // Sroll view
