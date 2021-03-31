@@ -15,7 +15,17 @@ struct NavigationBarDetailView: View {
     var body: some View {
         HStack {
             Button(action: {}, label: {
-                /*@START_MENU_TOKEN@*/Text("Button")/*@END_MENU_TOKEN@*/
+                Image(systemName: "chevron.left")
+                    .font(.title)
+                    .foregroundColor(.white)
+            })
+            
+            Spacer()
+            
+            Button(action: {}, label: {
+                Image(systemName: "cart")
+                    .font(.title)
+                    .foregroundColor(.white)
             })
         }  // HStack
     }
