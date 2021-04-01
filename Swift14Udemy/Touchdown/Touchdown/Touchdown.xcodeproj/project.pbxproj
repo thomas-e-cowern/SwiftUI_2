@@ -17,6 +17,7 @@
 		41A7EEE82614EC16000F4D29 /* NavigationBarDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7EEE72614EC15000F4D29 /* NavigationBarDetailView.swift */; };
 		41A7EEEB2614EDDA000F4D29 /* HeaderDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7EEEA2614EDDA000F4D29 /* HeaderDetailView.swift */; };
 		41A7EEEE2614EF04000F4D29 /* TopPartDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7EEED2614EF04000F4D29 /* TopPartDetailView.swift */; };
+		41A7EEF1261643F7000F4D29 /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A7EEF0261643F6000F4D29 /* CustomShape.swift */; };
 		41AFEF0C2608C8E100F71DF6 /* TouchdownApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AFEF0B2608C8E100F71DF6 /* TouchdownApp.swift */; };
 		41AFEF0E2608C8E100F71DF6 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41AFEF0D2608C8E100F71DF6 /* ContentView.swift */; };
 		41AFEF102608C8E600F71DF6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 41AFEF0F2608C8E600F71DF6 /* Assets.xcassets */; };
@@ -50,6 +51,7 @@
 		41A7EEE72614EC15000F4D29 /* NavigationBarDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarDetailView.swift; sourceTree = "<group>"; };
 		41A7EEEA2614EDDA000F4D29 /* HeaderDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderDetailView.swift; sourceTree = "<group>"; };
 		41A7EEED2614EF04000F4D29 /* TopPartDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopPartDetailView.swift; sourceTree = "<group>"; };
+		41A7EEF0261643F6000F4D29 /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 		41AFEF082608C8E100F71DF6 /* Touchdown.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Touchdown.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		41AFEF0B2608C8E100F71DF6 /* TouchdownApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TouchdownApp.swift; sourceTree = "<group>"; };
 		41AFEF0D2608C8E100F71DF6 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -207,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				41AFEF2E2608D8CB00F71DF6 /* Constant.swift */,
+				41A7EEF0261643F6000F4D29 /* CustomShape.swift */,
 			);
 			path = Utlility;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				41A7EEDE2614C441000F4D29 /* BrandItemView.swift in Sources */,
 				41AFEF4D2609293800F71DF6 /* CategoryItemView.swift in Sources */,
 				41AFEF4726091BD800F71DF6 /* FeaturedTabView.swift in Sources */,
+				41A7EEF1261643F7000F4D29 /* CustomShape.swift in Sources */,
 				41AFEF3E2609176D00F71DF6 /* PlayerModel.swift in Sources */,
 				41A7EEDB2613A53F000F4D29 /* BrandModel.swift in Sources */,
 				41A7EED126134F61000F4D29 /* TitleView.swift in Sources */,
