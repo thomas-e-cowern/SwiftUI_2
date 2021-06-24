@@ -23,30 +23,7 @@ struct ContentView: View {
         animation: .default)
     private var items: FetchedResults<Item>
 
-    var body: some View {
-        NavigationView {
-            List {
-                ForEach(items) { item in
-                    Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                }
-                .onDelete(perform: deleteItems)
-            } // List
-            .toolbar {
-                #if os(iOS)
-                ToolbarItem(placement: .navigationBarLeading) {
-                    EditButton()
-                }
-                #endif
-
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    Button(action: addItem) {
-                        Label("Add Item", systemImage: "plus")
-                    }
-                }
-            } // Toolbar
-        } // NavigationView
-    }
-
+    // Mark: Functions
     private func addItem() {
         withAnimation {
             let newItem = Item(context: viewContext)
@@ -75,6 +52,31 @@ struct ContentView: View {
             }
         }
     }
+    
+    // Mark: Body
+    var body: some View {
+        NavigationView {
+            List {
+                ForEach(items) { item in
+                    Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                }
+                .onDelete(perform: deleteItems)
+            } // List
+            .toolbar {
+                #if os(iOS)
+                ToolbarItem(placement: .navigationBarLeading) {
+                    EditButton()
+                }
+                #endif
+
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    Button(action: addItem) {
+                        Label("Add Item", systemImage: "plus")
+                    }
+                }
+            } // Toolbar
+        } // NavigationView
+    }
 }
 
 private let itemFormatter: DateFormatter = {
@@ -84,6 +86,7 @@ private let itemFormatter: DateFormatter = {
     return formatter
 }()
 
+// MARK: Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         ContentView().environment(\.managedObjectContext, PersistenceController.preview.container.viewContext)
