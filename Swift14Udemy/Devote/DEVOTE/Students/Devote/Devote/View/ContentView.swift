@@ -13,6 +13,10 @@ struct ContentView: View {
     // MARK:  Properties
     @State var task : String = ""
     
+    private var isButtonDisabled : Bool {
+        task.isEmpty
+    }
+    
     // MARK:  Fetching data
     @Environment(\.managedObjectContext) private var viewContext
 
@@ -73,15 +77,16 @@ struct ContentView: View {
                         Text("Save")
                         Spacer()
                     })
+                    .disabled(isButtonDisabled)
                     .padding()
                     .font(.headline)
                     .foregroundColor(.white)
-                    .background(Color.pink)
+                    .background(isButtonDisabled ? Color.gray : Color.pink)
                     .cornerRadius(10)
                 }
                 List {
                     ForEach(items) { item in
-                        VStack {
+                        VStack (alignment: .leading) {
                             Text(item.task ?? "")
                                 .font(.headline)
                                 .fontWeight(.bold)
