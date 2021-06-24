@@ -14,8 +14,6 @@ struct ContentView: View {
     
     
     // MARK:  Fetching data
-    
-    
     @Environment(\.managedObjectContext) private var viewContext
 
     @FetchRequest(
@@ -78,13 +76,6 @@ struct ContentView: View {
         } // NavigationView
     }
 }
-
-private let itemFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateStyle = .short
-    formatter.timeStyle = .medium
-    return formatter
-}()
 
 // MARK: Preview
 struct ContentView_Previews: PreviewProvider {
