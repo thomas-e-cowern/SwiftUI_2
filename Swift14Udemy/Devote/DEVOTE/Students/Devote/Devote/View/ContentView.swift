@@ -26,6 +26,9 @@ struct ContentView: View {
         withAnimation {
             let newItem = Item(context: viewContext)
             newItem.timestamp = Date()
+            newItem.task = task
+            newItem.completion = false
+            newItem.id = UUID()
 
             do {
                 try viewContext.save()
@@ -70,10 +73,23 @@ struct ContentView: View {
                         Text("Save")
                         Spacer()
                     })
+                    .padding()
+                    .font(.headline)
+                    .foregroundColor(.white)
+                    .background(Color.pink)
+                    .cornerRadius(10)
                 }
                 List {
                     ForEach(items) { item in
-                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                        VStack {
+                            Text(item.task ?? "")
+                                .font(.headline)
+                                .fontWeight(.bold)
+                            
+                            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                                .font(.footnote)
+                                .foregroundColor(.gray)
+                        } // MARK:  VStack
                     }
                     .onDelete(perform: deleteItems)
                 } // List
