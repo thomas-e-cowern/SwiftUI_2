@@ -11,7 +11,7 @@ import CoreData
 struct ContentView: View {
     
     // MARK:  Properties
-    
+    @State var task : String = ""
     
     // MARK:  Fetching data
     @Environment(\.managedObjectContext) private var viewContext
@@ -54,12 +54,30 @@ struct ContentView: View {
     // Mark: Body
     var body: some View {
         NavigationView {
-            List {
-                ForEach(items) { item in
-                    Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+            VStack {
+                VStack(spacing: 16) {
+                    TextField("New Task", text: $task)
+                        .padding()
+                        .background(
+                            Color(UIColor.systemGray)
+                        )
+                        .cornerRadius(10)
+                    
+                    Button(action: {
+                        addItem()
+                    }, label: {
+                        Spacer()
+                        Text("Save")
+                        Spacer()
+                    })
                 }
-                .onDelete(perform: deleteItems)
-            } // List
+                List {
+                    ForEach(items) { item in
+                        Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                    }
+                    .onDelete(perform: deleteItems)
+                } // List
+            } // MARK:  VStack
             .toolbar {
                 #if os(iOS)
                 ToolbarItem(placement: .navigationBarLeading) {
