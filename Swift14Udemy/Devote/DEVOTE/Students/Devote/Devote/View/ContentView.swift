@@ -104,15 +104,17 @@ struct ContentView: View {
                         .onDelete(perform: deleteItems)
                     } // List
                 } // MARK:  VStack
-                .toolbar {
-                    #if os(iOS)
-                    ToolbarItem(placement: .navigationBarTrailing) {
-                        EditButton()
-                    }
-                    #endif
-                }   // Toolbar
+
             } // MARK:  ZStack
+            .toolbar {
+                #if os(iOS)
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    EditButton()
+                }
+                #endif
+            }   // Toolbar
         } // NavigationView
+        .navigationViewStyle(StackNavigationViewStyle())
     }
 }
 
