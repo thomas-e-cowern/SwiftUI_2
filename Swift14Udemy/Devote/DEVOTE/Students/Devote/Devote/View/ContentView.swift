@@ -13,7 +13,7 @@ struct ContentView: View {
     // MARK:  Properties
     @State var task : String = ""
     
-
+    @State private var showNewTaskItem : Bool = false
     
     // MARK:  Fetching data
     @Environment(\.managedObjectContext) private var viewContext
@@ -43,26 +43,54 @@ struct ContentView: View {
     // Mark: Body
     var body: some View {
         NavigationView {
+            // MARK:  Main View
             ZStack {
-                List {
-                    ForEach(items) { item in
-                        VStack (alignment: .leading) {
-                            Text(item.task ?? "")
-                                .font(.headline)
-                                .fontWeight(.bold)
-                            
-                            Text("Item at \(item.timestamp!, formatter: itemFormatter)")
-                                .font(.footnote)
-                                .foregroundColor(.gray)
-                        } // MARK:  VStack
-                    }
-                    .onDelete(perform: deleteItems)
-                } // List
-                .listStyle(InsetGroupedListStyle())
-                .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.3), radius: 12)
-                .padding(.vertical, 0)
-                .frame(maxWidth: 640)
+                
+                VStack {
+                    // MARK:  Header
+                    Spacer(minLength: 80)
+                    
+                    // MARK:  New Task Button
+                    Button(action: {
+                        showNewTaskItem = true
+                    }, label: {
+                        Image(systemName: "plus.circle")
+                            .font(.system(size: 30, weight: .semibold, design: .rounded))
+                        Text("New Task")
+                            .font(.system(size: 24, weight: .bold, design: .rounded))
+                    })
+                    .foregroundColor(.white)
+                    .padding(.horizontal, 20)
+                    .padding(.vertical, 15)
+                    .background(LinearGradient(gradient: Gradient(colors: [Color.pink, Color.blue]), startPoint: .leading, endPoint: .trailing))
+                    .clipShape(Capsule())
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.25), radius: 9, x: 0.0, y: 4.0)
+                    // MARK:  Tasks
+                    List {
+                        ForEach(items) { item in
+                            VStack (alignment: .leading) {
+                                Text(item.task ?? "")
+                                    .font(.headline)
+                                    .fontWeight(.bold)
+                                
+                                Text("Item at \(item.timestamp!, formatter: itemFormatter)")
+                                    .font(.footnote)
+                                    .foregroundColor(.gray)
+                            } // MARK:  VStack
+                        }
+                        .onDelete(perform: deleteItems)
+                    } // List
+                    .listStyle(InsetGroupedListStyle())
+                    .shadow(color: Color(red: 0, green: 0, blue: 0, opacity: 0.3), radius: 12)
+                    .padding(.vertical, 0)
+                    .frame(maxWidth: 640)
+                }  // End of VStack
+
             } // MARK:  ZStack
+            
+            // MARK:  New Task Item
+            
+            
             .onAppear() {
                 UITableView.appearance().backgroundColor = UIColor.clear
             }
