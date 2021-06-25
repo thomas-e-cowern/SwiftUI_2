@@ -85,10 +85,12 @@ struct ContentView: View {
                     .padding(.vertical, 0)
                     .frame(maxWidth: 640)
                 }  // End of VStack
-
+                // MARK:  New Task Item
+                if showNewTaskItem {
+                    NewTaskItemView()
+                }
+                
             } // MARK:  ZStack
-            
-            // MARK:  New Task Item
             
             
             .onAppear() {
