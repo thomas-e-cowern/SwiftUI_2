@@ -104,8 +104,8 @@ struct ContentView: View {
                         .onDelete(perform: deleteItems)
                     } // List
                 } // MARK:  VStack
-
             } // MARK:  ZStack
+            .navigationBarTitle("Daily Tasks", displayMode: .large)
             .toolbar {
                 #if os(iOS)
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -113,6 +113,7 @@ struct ContentView: View {
                 }
                 #endif
             }   // Toolbar
+            .background(backgroundGradient.ignoresSafeArea(.all))
         } // NavigationView
         .navigationViewStyle(StackNavigationViewStyle())
     }
