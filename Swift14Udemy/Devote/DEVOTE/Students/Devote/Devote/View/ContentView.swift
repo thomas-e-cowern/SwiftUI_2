@@ -120,6 +120,9 @@ struct ContentView: View {
                 }
                 #endif
             }   // Toolbar
+            .background(
+                BackgroundImageVIew()
+            )
             .background(backgroundGradient.ignoresSafeArea(.all))
         } // NavigationView
         .navigationViewStyle(StackNavigationViewStyle())
