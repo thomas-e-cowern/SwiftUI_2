@@ -63,7 +63,14 @@ struct ContentView: View {
                             .frame(minWidth: 70, minHeight: 24)
                             .background(Capsule().stroke(Color.white, lineWidth: 2))
                         // Appearance Button
-                        
+                        Button(action: {
+                            
+                        }, label: {
+                            Image(systemName: "moon.circle")
+                                .resizable()
+                                .frame(width: 24, height: 24)
+                                .font(.system(.title, design: .rounded))
+                        })
                     } // End of HStack
                     .padding()
                     .foregroundColor(.white)
