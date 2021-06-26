@@ -48,6 +48,17 @@ struct ContentView: View {
                 
                 VStack {
                     // MARK:  Header
+                    HStack (spacing: 10) {
+                        // Title
+                        
+                        // Edit Button
+                        
+                        // Appearance Button
+                        
+                    } // End of HStack
+                    .padding()
+                    .foregroundColor(.white)
+                    
                     Spacer(minLength: 80)
                     
                     // MARK:  New Task Button
@@ -103,13 +114,7 @@ struct ContentView: View {
                 UITableView.appearance().backgroundColor = UIColor.clear
             }
             .navigationBarTitle("Daily Tasks", displayMode: .large)
-            .toolbar {
-                #if os(iOS)
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    EditButton()
-                }
-                #endif
-            }   // Toolbar
+            .navigationBarHidden(true)
             .background(
                 BackgroundImageVIew()
             )
