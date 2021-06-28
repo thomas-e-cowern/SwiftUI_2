@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4164062926862C0C000F2809 /* NewTaskItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164062826862C0C000F2809 /* NewTaskItemView.swift */; };
 		4164062B26866EC9000F2809 /* BlankView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4164062A26866EC9000F2809 /* BlankView.swift */; };
+		419EE0D5268A0F1C002BFF3F /* ListRowItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 419EE0D4268A0F1C002BFF3F /* ListRowItemView.swift */; };
 		41A3E7D72684D6BD005DFC80 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41A3E7D62684D6BC005DFC80 /* Constant.swift */; };
 		41B4AD1126851D5C00A2B633 /* HideKeyboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B4AD1026851D5C00A2B633 /* HideKeyboardExtension.swift */; };
 		41B84F6F2686168B007A6930 /* BackgroundImageVIew.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41B84F6E2686168B007A6930 /* BackgroundImageVIew.swift */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		4164062826862C0C000F2809 /* NewTaskItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTaskItemView.swift; sourceTree = "<group>"; };
 		4164062A26866EC9000F2809 /* BlankView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlankView.swift; sourceTree = "<group>"; };
+		419EE0D4268A0F1C002BFF3F /* ListRowItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListRowItemView.swift; sourceTree = "<group>"; };
 		41A3E7D62684D6BC005DFC80 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		41B4AD1026851D5C00A2B633 /* HideKeyboardExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HideKeyboardExtension.swift; sourceTree = "<group>"; };
 		41B84F6E2686168B007A6930 /* BackgroundImageVIew.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundImageVIew.swift; sourceTree = "<group>"; };
@@ -72,14 +74,14 @@
 		41F0849F2677A9C200956FD1 /* Devote */ = {
 			isa = PBXGroup;
 			children = (
+				41F084A02677A9C200956FD1 /* DevoteApp.swift */,
 				41F084BF2677ACFF00956FD1 /* Extension */,
 				41F084BE2677ACF800956FD1 /* Utility */,
 				41F084BB2677ACC300956FD1 /* Style */,
 				41F084BA2677ACA200956FD1 /* Sound */,
-				41F084A02677A9C200956FD1 /* DevoteApp.swift */,
+				41F084C02677AD1B00956FD1 /* Model */,
 				41F084BD2677ACE700956FD1 /* View */,
 				41F084A42677A9CB00956FD1 /* Assets.xcassets */,
-				41F084C02677AD1B00956FD1 /* Model */,
 				41F084AE2677A9CB00956FD1 /* Info.plist */,
 				41F084A62677A9CB00956FD1 /* Preview Content */,
 			);
@@ -118,6 +120,7 @@
 				41B84F6E2686168B007A6930 /* BackgroundImageVIew.swift */,
 				4164062826862C0C000F2809 /* NewTaskItemView.swift */,
 				4164062A26866EC9000F2809 /* BlankView.swift */,
+				419EE0D4268A0F1C002BFF3F /* ListRowItemView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -225,6 +228,7 @@
 				41B84F6F2686168B007A6930 /* BackgroundImageVIew.swift in Sources */,
 				4164062B26866EC9000F2809 /* BlankView.swift in Sources */,
 				41A3E7D72684D6BD005DFC80 /* Constant.swift in Sources */,
+				419EE0D5268A0F1C002BFF3F /* ListRowItemView.swift in Sources */,
 				41F084AD2677A9CB00956FD1 /* Devote.xcdatamodeld in Sources */,
 				41F084A12677A9C200956FD1 /* DevoteApp.swift in Sources */,
 				4164062926862C0C000F2809 /* NewTaskItemView.swift in Sources */,
