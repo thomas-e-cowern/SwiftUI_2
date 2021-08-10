@@ -23,7 +23,7 @@ struct CheckboxStyle: ToggleStyle {
 
 struct CheckboxStyle_Previews: PreviewProvider {
     static var previews: some View {
-        Toggle("Placeholder Label", isOn: .constant(true))
+        Toggle("Placeholder Label", isOn: .constant(false))
             .toggleStyle(CheckboxStyle())
             .padding()
             .previewLayout(.sizeThatFits)
