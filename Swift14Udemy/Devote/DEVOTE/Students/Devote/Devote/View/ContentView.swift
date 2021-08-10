@@ -109,7 +109,7 @@ struct ContentView: View {
                 // MARK:  New Task Item
                 if showNewTaskItem {
                     
-                    BlankView()
+                    BlankView(backgroundColor: Color.black, backgroundOpacity: 0.3)
                         .onTapGesture {
                             showNewTaskItem = false
                         }
