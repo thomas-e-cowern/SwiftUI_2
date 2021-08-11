@@ -42,7 +42,20 @@ struct DevoteWidgetEntryView : View {
     var entry: Provider.Entry
 
     var body: some View {
-        Text(entry.date, style: .time)
+//        Text(entry.date, style: .time)
+        
+        ZStack {
+            backgroundGradient
+            
+            Image("rocket-small")
+                .resizable()
+                .scaledToFit()
+            
+            Image("logo")
+                .resizable()
+                .frame(width: 36, height: 36)
+        }
+        // End of ZStack
     }
 }
 
@@ -54,8 +67,8 @@ struct DevoteWidget: Widget {
         StaticConfiguration(kind: kind, provider: Provider()) { entry in
             DevoteWidgetEntryView(entry: entry)
         }
-        .configurationDisplayName("My Widget")
-        .description("This is an example widget.")
+        .configurationDisplayName("Devote Launcher")
+        .description("This is an example widget for the personal to do app.")
     }
 }
 
