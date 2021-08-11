@@ -40,6 +40,8 @@ struct SimpleEntry: TimelineEntry {
 
 struct DevoteWidgetEntryView : View {
     var entry: Provider.Entry
+    
+    @Environment(\.widgetFamily) var widgetFamily
 
     var body: some View {
 //        Text(entry.date, style: .time)
@@ -54,12 +56,15 @@ struct DevoteWidgetEntryView : View {
                 
                 Image("logo")
                     .resizable()
-                    .frame(width: 36, height: 36)
+                    .frame(
+                        width: widgetFamily != .systemSmall ? 56 : 36,
+                        height: widgetFamily != .systemSmall ? 56 : 36
+                    )
                     .offset(
                         x: (geometry.size.width / 2) - 20,
                         y: (geometry.size.height / -2) + 20)
-                    .padding(.top, 12)
-                    .padding(.trailing, 12)
+                    .padding(.top, widgetFamily != .systemSmall ? 32 : 12)
+                    .padding(.trailing, widgetFamily != .systemSmall ? 32 : 12)
                 
                 HStack {
                     Text("Just Do it")
@@ -72,6 +77,10 @@ struct DevoteWidgetEntryView : View {
                                         .blendMode(.overlay)
                         )
                         .clipShape(Capsule())
+                    
+                    if widgetFamily != .systemSmall {
+                        Spacer()
+                    }
                 }
                 // End of HStack
                 .padding()
